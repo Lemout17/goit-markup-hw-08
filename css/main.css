@@ -222,6 +222,7 @@ strong {
 @media (min-width: 1200px) {
   .contacts-list .item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 
