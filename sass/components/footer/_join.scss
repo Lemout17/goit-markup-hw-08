@@ -1,8 +1,18 @@
 .join-section {
-  width: 206px;
-  margin-left: 70px;
-  margin-right: 93px;
-  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 60px;
+  @include for-size(tablet) {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-right: 74px;
+  }
+  @include for-size(desktop) {
+    width: 206px;
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
 }
 .join-title {
   font-weight: 700;

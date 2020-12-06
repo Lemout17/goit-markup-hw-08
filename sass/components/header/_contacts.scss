@@ -1,24 +1,56 @@
 .contacts-list {
-  display: flex;
-  margin-left: auto;
+  @include for-size(mobile-only) {
+    display: none;
+  }
+
+  @include for-size(tablet) {
+    margin-left: auto;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    margin-left: auto;
+  }
 }
-.contacts-list .item + .item {
-  margin-left: 50px;
+.contacts-list .item:not(:last-child) {
+  margin-bottom: 10px;
+
+  @include for-size(desktop) {
+    margin-right: 50px;
+  }
 }
 .address-link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: $text-color;
-  @extend %transition;
+  transition-duration: 250ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $text-color;
+    transition-duration: 250ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   &:hover,
   &:focus {
@@ -27,6 +59,11 @@
 }
 
 .adress-icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+
+  @include for-size(desktop) {
+    margin-right: 10px;
+    fill: currentColor;
+  }
 }

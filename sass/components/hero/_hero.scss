@@ -1,20 +1,55 @@
 .hero-section {
   background-color: $hero-bg;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @include for-size(desktop) {
+    background-color: $hero-bg;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   .title {
-    width: 696px;
+    width: 100%;
     margin: auto auto;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 28px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $white-color;
     margin-top: 0;
     margin-bottom: 30px;
+
+    @include for-size(tablet) {
+      width: 360px;
+      margin: auto;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.615;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $white-color;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @include for-size(desktop) {
+      width: 696px;
+      margin: auto auto;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $white-color;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
   }
 }

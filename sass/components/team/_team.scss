@@ -1,22 +1,73 @@
 .team-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-top: 0;
   margin-bottom: 0;
   background: $team-bg;
 
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: $team-bg;
+  }
+
   .title {
     margin: 0 0 50px 0;
 
-    @extend %title-shared;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-color;
+
+    @include for-size(desktop) {
+      margin: 0 0 50px 0;
+
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $title-color;
+    }
   }
 }
 
 .team-list {
-  display: flex;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .item:nth-child(2n + 1) {
+    @include for-size(tablet) {
+      margin-right: 30px;
+    }
+  }
+
+  .item:not(:nth-child(n + 3)) {
+    @include for-size(tablet) {
+      margin-bottom: 30px;
+    }
+  }
 
   .item:not(:last-child) {
-    margin-right: 30px;
+    @include for-size(mobile-only) {
+      margin-bottom: 30px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
   }
 
   .item {
@@ -24,30 +75,58 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+.team-img {
+  @include for-size(mobile-only) {
+    width: 100%;
   }
 }
 
 .team-list {
   .subject {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.18;
+    line-height: 1.125;
     text-align: center;
     letter-spacing: 0.03em;
     color: $title-color;
     margin: 0;
+
+    @include for-size(desktop) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $title-color;
+      margin: 0;
+    }
   }
 
   .text {
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 1.18;
+    line-height: 1.125;
     text-align: center;
     letter-spacing: 0.03em;
     color: $text-color;
     margin-top: 10px;
+
+    @include for-size(desktop) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $text-color;
+      margin-top: 10px;
+    }
   }
 }
 

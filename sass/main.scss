@@ -1,9 +1,9 @@
 @import './utils/variables';
 @import './utils/mixin';
+@import './utils/text';
 @import './base/base';
 @import './base/container';
 @import './utils/transition';
-@import './utils/text';
 @import './components/header/header';
 @import './components/header/logo';
 @import './components/header/navigation';
@@ -19,7 +19,7 @@
 @import './components/clients/clients';
 @import './components/portfolio/filter';
 @import './components/portfolio/product';
-@import './components/portfolio/overlay';
+@import './components/portfolio/product-overlay';
 @import './components/footer/footer';
 @import './components/footer/adress';
 @import './components/footer/join';

@@ -1,13 +1,29 @@
 .filter-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .list-item:not(:last-child) {
     margin-right: 8px;
   }
-  .list-item {
-    margin: 0;
+
+  .list-item:nth-child(-n + 3) {
+    @include for-size(mobile-only) {
+      margin-bottom: 15px;
+    }
   }
 }
 

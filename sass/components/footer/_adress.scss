@@ -1,13 +1,39 @@
 .footer-adress-section {
-  width: 231px;
+  @include for-size(mobile-only) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: 60px;
+    margin-left: 61px;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  @include for-size(desktop) {
+    width: 231px;
+    margin-bottom: 0;
+  }
 }
 
 .adress-section {
-  text-align: left;
+  @include for-size(desktop) {
+    text-align: left;
+  }
 }
 
 .footer {
-  display: flex;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 
   .location {
     display: inline-block;
