@@ -72,6 +72,12 @@ strong {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .social-link, .filter-button, .port-list-link, .footer .contact, .footer-social-link, .backdrop, .modal-close-button, .form-input, .text-area {
   transition-duration: 250ms;
   transition-property: all;
