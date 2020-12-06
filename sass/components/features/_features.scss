@@ -1,0 +1,44 @@
+.features-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-list {
+  display: flex;
+
+  .title {
+    margin: 30px 0 0 0;
+
+    font-weight: 700;
+    @extend %text-shared;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    margin: 10px 0 0 0;
+  }
+
+  .item {
+    width: 270px;
+  }
+
+  .item:before {
+    display: block;
+    height: 120px;
+    content: '';
+    border-radius: 4px;
+    background-color: $team-bg;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

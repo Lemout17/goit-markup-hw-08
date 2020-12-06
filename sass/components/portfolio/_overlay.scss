@@ -1,0 +1,27 @@
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+
+  &-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    margin: 0;
+    transform: translateY(100%);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: $white-color;
+    background-color: $accent-color;
+    @extend %transition;
+  }
+}
+
+.img-description {
+  padding: 20px 24px;
+}
