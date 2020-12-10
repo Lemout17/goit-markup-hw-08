@@ -1,13 +1,15 @@
 .page-header {
+  position: relative;
   background-color: $header-bg;
   border-bottom: 1px solid #ececec;
 }
 
 .header.container {
   @include for-size(mobile-only) {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   @include for-size(tablet) {
@@ -18,5 +20,68 @@
   @include for-size(desktop) {
     display: flex;
     align-items: center;
+  }
+}
+.menu-button {
+  display: inline-block;
+  margin-left: auto;
+  padding: 0;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  @include for-size(mobile-only) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+    width: 100%;
+
+    background-color: white;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 }

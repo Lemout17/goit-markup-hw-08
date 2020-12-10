@@ -20,38 +20,49 @@
         <a class="logo" href="./index.html"
           ><span><span style="color: #2196f3">Web</span>Studio</span></a
         >
-        <nav class="nav-container">
-          <ul class="nav-list list">
+        <button type="button" class="menu-button" data-menu-button>
+          <svg width="40" height="40">
+            <use
+              class="icon-close"
+              href="./img/svg/sprite.svg#icon-closed"
+            ></use>
+            <use class="icon-menu" href="./img/svg/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="nav-container">
+            <ul class="nav-list list">
+              <li class="item">
+                <a class="nav-link current" href="./index.html"> Студия</a>
+              </li>
+              <li class="item">
+                <a class="nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item">
+                <a class="nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts-list list">
             <li class="item">
-              <a class="nav-link current" href="./index.html"> Студия</a>
+              <a class="address-link" href="mailto:info@devstudio.com">
+                <svg class="adress-icon" width="16" height="12">
+                  <use href="./img/svg/sprite.svg#envelope "></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
             <li class="item">
-              <a class="nav-link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="item">
-              <a class="nav-link" href="#contacts">Контакты</a>
+              <a class="address-link" href="tel:+380961111111">
+                <svg class="adress-icon" width="10" height="16">
+                  <use href="./img/svg/sprite.svg#smartphone "></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-
-        <ul class="contacts-list list">
-          <li class="item">
-            <a class="address-link" href="mailto:info@devstudio.com">
-              <svg class="adress-icon" width="16" height="12">
-                <use href="./img/svg/sprite.svg#envelope "></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a class="address-link" href="tel:+380961111111">
-              <svg class="adress-icon" width="10" height="16">
-                <use href="./img/svg/sprite.svg#smartphone "></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -109,31 +120,19 @@
           <ul class="example-list list">
             <li class="item">
               <div class="example-overlay">
-                <img
-                  src="./img/index/Example1.jpg"
-                  alt="пример работы"
-                  width="370"
-                />
+                <img src="./img/index/Example1.jpg" alt="пример работы" />
                 <p class="example-text">Десктопные приложения</p>
               </div>
             </li>
             <li class="item">
               <div class="example-overlay">
-                <img
-                  src="./img/index/Example2.jpg"
-                  alt="пример работы"
-                  width="370"
-                />
+                <img src="./img/index/Example2.jpg" alt="пример работы" />
                 <p class="example-text">Мобильные приложения</p>
               </div>
             </li>
             <li class="item">
               <div class="example-overlay">
-                <img
-                  src="./img/index/Example3.jpg"
-                  alt="пример работы"
-                  width="370"
-                />
+                <img src="./img/index/Example3.jpg" alt="пример работы" />
                 <p class="example-text">Дизайнерские решения</p>
               </div>
             </li>
@@ -150,7 +149,6 @@
                 class="team-img"
                 src="./img/index/Team4.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
               />
               <div class="team-card">
                 <h3 class="subject">Игорь Демьяненко</h3>
@@ -192,7 +190,6 @@
                 class="team-img"
                 src="./img/index/Team5.jpg"
                 alt="Ольга Репина"
-                width="270"
               />
               <div class="team-card">
                 <h3 class="subject">Ольга Репина</h3>
@@ -234,7 +231,6 @@
                 class="team-img"
                 src="./img/index/Team6.jpg"
                 alt="Николай Тарасов"
-                width="270"
               />
               <div class="team-card">
                 <h3 class="subject">Николай Тарасов</h3>
@@ -276,7 +272,6 @@
                 class="team-img"
                 src="./img/index/Team7.jpg "
                 alt="Михаил Ермаков"
-                width="270"
               />
               <div class="team-card">
                 <h3 class="subject">Михаил Ермаков</h3>
@@ -498,5 +493,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 .nav-container {
-  display: none;
   @include for-size(desktop) {
     display: flex;
     margin-left: 93px;
@@ -11,11 +10,32 @@
   }
 }
 .nav-list {
-  display: flex;
+  @include for-size(mobile-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .item:not(:last-child) {
-    margin-right: 50px;
+    .item {
+      margin-bottom: 40px;
+    }
+
+    .item:last-child {
+      margin-bottom: 60px;
+    }
   }
+  @include for-size(tablet) {
+    display: flex;
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @include for-size(desktop) {
+    display: flex;
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
   .nav-link.current {
     color: $accent-color;
   }
@@ -36,19 +56,34 @@
 .nav-link {
   display: flex;
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   color: $title-color;
   letter-spacing: 0.02em;
   text-decoration: none;
   transition-duration: 250ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include for-size(tablet) {
+    display: flex;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $title-color;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
   @include for-size(desktop) {
     display: flex;
     position: relative;

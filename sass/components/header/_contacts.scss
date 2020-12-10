@@ -1,8 +1,7 @@
 .contacts-list {
-  @include for-size(mobile-only) {
-    display: none;
+  .item:first-child {
+    margin-bottom: 16px;
   }
-
   @include for-size(tablet) {
     margin-left: auto;
   }
@@ -13,8 +12,9 @@
   }
 }
 .contacts-list .item:not(:last-child) {
-  margin-bottom: 10px;
-
+  @include for-size(tablet) {
+    margin-bottom: 10px;
+  }
   @include for-size(desktop) {
     margin-right: 50px;
     margin-bottom: 0;
@@ -26,7 +26,7 @@
 
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -35,6 +35,21 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $text-color;
+    transition-duration: 250ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
   @include for-size(desktop) {
     display: flex;
     align-items: center;
