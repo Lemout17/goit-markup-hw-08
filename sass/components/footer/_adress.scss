@@ -13,6 +13,7 @@
   }
 
   @include for-size(desktop) {
+    text-align: left;
     width: 231px;
     margin: 0;
   }

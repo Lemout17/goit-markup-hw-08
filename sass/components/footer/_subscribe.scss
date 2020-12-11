@@ -6,6 +6,7 @@
     margin: auto;
   }
   @include for-size(desktop) {
+    text-align: left;
     margin-top: 12px;
   }
 }
